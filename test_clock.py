@@ -26,13 +26,19 @@ class BallsTestCase(unittest.TestCase):
     """Testing minute balls"""
     self.assertTrue(minute_balls())
   
+  # add test for 5
+  
   def test_five_minute_balls(self):
     """Testing five minute balls"""
     self.assertTrue(five_minute_balls())
   
+  # add test for 12
+  
   def test_hour_balls(self):
     """Testing hour balls"""
     self.assertTrue(hour_balls())
+
+  # add test for 1 and 12
 
 if __name__ == '__main__':
   unittest.main()

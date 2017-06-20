@@ -67,17 +67,18 @@ def run_ball_queue():
   ball_queue = deque(queue_max)
   time.sleep(SIXTY)
   print ball_queue
-  print ball_queue.popleft()
-  minute_balls()
+  ball = ball_queue.popleft()
+  print ball
+  ball_queue.append(minute_balls(ball))
 
 # minute balls
-def minute_balls():
+def minute_balls(ball):
   """Asks user how many balls in the clock.
 
   Long description Ipsum Lorem
   
   Args:
-    Ipsum Lorem
+    Every minute, the least recently used ball is removed from the queue of balls at the bottom of the clock, elevated, then deposited on the minute indicator track, which is able to hold four balls. When a fifth ball rolls on to the minute indicator track, its weight causes the track to tilt.
 
   Returns:
     Ipsum Lorem
@@ -87,11 +88,14 @@ def minute_balls():
 
   """
 
-  while len(minute_queue) < 12:
-    minute_queue.append(ball_queue.popleft())
+  while len(minute_queue) < 5:
+    minute_queue.append(ball)
+  while len(minute_queue) > 0:
+    return minute_queue.popleft()
+  five_minute_balls(ball)
     
 # five minute balls
-def five_minute_balls():
+def five_minute_balls(ball):
   """Asks user how many balls in the clock.
 
   Long description Ipsum Lorem
@@ -108,7 +112,10 @@ def five_minute_balls():
   """
 
   while len(five_queue) < 12:
-    five_queue.append(minute_queue.popleft())
+    five_queue.append(ball)
+  while len(five_queue) > 0:
+    return five_queue.popleft()
+  hour_balls(ball)
     
 # hour balls
 def hour_balls():
@@ -127,6 +134,8 @@ def hour_balls():
 
   """
   while len(hour_queue) < 12:
-    hour_queue.append(five_queue.popleft())
+    hour_queue.append(ball)
+  while len(hour_queue) > 0:
+    return hour_queue.popleft()
 
 run_ball_queue()
