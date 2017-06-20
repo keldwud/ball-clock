@@ -26,3 +26,8 @@ Sample Input | Sample Output
 1. Provide a way for users to provide an input value
 1. You must use git for source control and prior to the second interview please push your code to github.com and send me the link to your repository.
 1. Be prepared to answer a question along the lines of… How would your code change if given the requirement to add a new queue or alter existing queues? Would you be required to add new code, or modify existing code?
+
+## Run using the following command
+docker run ball-clock
+
+Output should be
