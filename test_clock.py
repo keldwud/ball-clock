@@ -3,18 +3,22 @@ from clock import how_many_balls
 from clock import minute_balls
 from clock import five_minute_balls
 from clock import hour_balls
-
+from clock import run_ball_queue
 
 class BallsTestCase(unittest.TestCase):
   """Tests for `ball-clock.py`."""
 
-  def test_is_twenty_seven_valid(self):
+  def test_how_many_balls_min_balls(self):
     """Is twenty-seven successfully accepted?"""
     self.assertTrue(how_many_balls(27))
 
-  def test_is_one_valid(self):
+  def test_how_many_balls_max_balls(self):
     """Is one-hundred-twenty-seven correctly determined to be invalid input?"""
     self.assertTrue(how_many_balls(127))
+
+  def test_ball_queue(self):
+    """Testing ball queue"""
+    self.assertTrue(run_ball_queue())
 
   def test_minute_balls(self):
     """Testing minute balls"""
