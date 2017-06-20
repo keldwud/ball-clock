@@ -34,6 +34,6 @@ git clone https://github.com/keldwud/ball-clock.git
 docker build -t keldwud/ball-clock .
 
 ### Run using the following command
-docker run keldwud/clock python test_clock.py && python clock.py
+docker run keldwud/clock test_clock.py && clock.py
 
 Output will be in the format:
