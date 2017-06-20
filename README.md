@@ -27,7 +27,13 @@ Sample Input | Sample Output
 1. You must use git for source control and prior to the second interview please push your code to github.com and send me the link to your repository.
 1. Be prepared to answer a question along the lines of… How would your code change if given the requirement to add a new queue or alter existing queues? Would you be required to add new code, or modify existing code?
 
-## Run using the following command
+### Clone the repo using the following command
+git clone 
+
+### Build using the following command from the cloned repo
+docker build -t keldwud/ball-clock ./DOCKERFILE
+
+### Run using the following command
 docker run ball-clock clock _number_ # where number is a number from 27 - 127
 
 Output will be in the format:
