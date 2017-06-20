@@ -15,6 +15,8 @@ hour_queue = []
 
 queue_max = []
 
+MINUTES = 5
+HOURS = 12
 
 # accept input from user and validate input
 def how_many_balls():
@@ -88,7 +90,7 @@ def minute_balls(ball):
 
   """
 
-  while len(minute_queue) < 5:
+  while len(minute_queue) < MINUTES:
     minute_queue.append(ball)
   while len(minute_queue) > 0:
     return minute_queue.popleft()
@@ -111,7 +113,7 @@ def five_minute_balls(ball):
 
   """
 
-  while len(five_queue) < 12:
+  while len(five_queue) < HOURS:
     five_queue.append(ball)
   while len(five_queue) > 0:
     return five_queue.popleft()
@@ -133,7 +135,7 @@ def hour_balls():
     Ipsum Lorem
 
   """
-  while len(hour_queue) < 12:
+  while len(hour_queue) < HOURS:
     hour_queue.append(ball)
   while len(hour_queue) > 0:
     return hour_queue.popleft()
