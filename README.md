@@ -31,7 +31,7 @@ Sample Input | Sample Output
 git clone https://github.com/keldwud/ball-clock.git
 
 ### Build using the following command from the cloned repo
-docker build -t keldwud/ball-clock ./DOCKERFILE
+docker build -t keldwud/ball-clock .
 
 ### Run using the following command
 docker run ball-clock clock _number_ # where number is a number from 27 - 127
