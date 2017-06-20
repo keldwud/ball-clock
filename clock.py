@@ -7,6 +7,15 @@
 import time
 from collections import deque
 
+# create variables
+ball_queue = []
+minute_queue = []
+five_queue = []
+hour_queue = []
+
+queue_max = []
+
+
 # accept input from user and validate input
 def how_many_balls():
   """Asks user how many balls in the clock.
@@ -37,7 +46,7 @@ def how_many_balls():
 # create ball queue
 # operate ball queue
 def run_ball_queue():
-  """Asks user how many balls in the clock.
+  """Fills the ball queue and transfers a ball into minute queue every 60 seconds.
 
   Long description Ipsum Lorem
   
@@ -53,18 +62,16 @@ def run_ball_queue():
   """
 
   SIXTY = 1
-  queue_max = []
   queue_max.extend(range(1,how_many_balls()))
   print queue_max
-  ball_queue = deque()
+  ball_queue = deque(queue_max)
   time.sleep(SIXTY)
   print ball_queue
   print ball_queue.popleft()
-  minute += 1
-  print minute
+  minute_balls()
 
 # minute balls
-def minute_balls(ball):
+def minute_balls():
   """Asks user how many balls in the clock.
 
   Long description Ipsum Lorem
@@ -80,13 +87,11 @@ def minute_balls(ball):
 
   """
 
-  m = 0
-  while m < 5:
-    m += 1
-  return ball;
-
+  while len(minute_queue) < 12:
+    minute_queue.append(ball_queue.popleft())
+    
 # five minute balls
-def five_minute_balls(ball):
+def five_minute_balls():
   """Asks user how many balls in the clock.
 
   Long description Ipsum Lorem
@@ -102,13 +107,11 @@ def five_minute_balls(ball):
 
   """
 
-  f = 0
-  while f < 12:
-    f += 1
-  return ball;
-
+  while len(five_queue) < 12:
+    five_queue.append(minute_queue.popleft())
+    
 # hour balls
-def hour_balls(ball):
+def hour_balls():
   """Asks user how many balls in the clock.
 
   Long description Ipsum Lorem
@@ -123,10 +126,7 @@ def hour_balls(ball):
     Ipsum Lorem
 
   """
+  while len(hour_queue) < 12:
+    hour_queue.append(five_queue.popleft())
 
-  h = 0
-  while h < 12:
-    h += 1
-  return ball;
-  
 run_ball_queue()
