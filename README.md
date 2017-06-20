@@ -13,21 +13,16 @@ The input defines a succession of ball clocks. Each clock operates as described 
 # Output
 For each clock described in the input, your program should report the number of balls given in the input and the number of days (24-hour periods) which elapse before the clock returns to its initial ordering.
 
-Sample Input      Sample Output
-30                15 days
-45                378 days
- 
+Sample Input | Sample Output
+------------ | -------------
+30 | 15 days
+45 | 378 days
+
 # Requirements
-Use the language of your own choice to solve for any input between 27 to 127. For example C#, JavaScript, Ruby, Go, or Python.
-
-Provide automated unit and integration tests for your solution.
-
-Provide a Dockerfile to build a Docker Image that encapsulates your solution.
-
-Provide a single command to build and test your solution on a fresh clone of the repo.
-
-Provide a way for users to provide an input value
-
-You must use git for source control and prior to the second interview please push your code to github.com and send me the link to your repository.
-
-Be prepared to answer a question along the lines of… How would your code change if given the requirement to add a new queue or alter existing queues? Would you be required to add new code, or modify existing code?
+1. Use the language of your own choice to solve for any input between 27 to 127. For example C#, JavaScript, Ruby, Go, or Python.
+1. Provide automated unit and integration tests for your solution.
+1. Provide a Dockerfile to build a Docker Image that encapsulates your solution.
+1. Provide a single command to build and test your solution on a fresh clone of the repo.
+1. Provide a way for users to provide an input value
+1. You must use git for source control and prior to the second interview please push your code to github.com and send me the link to your repository.
+1. Be prepared to answer a question along the lines of… How would your code change if given the requirement to add a new queue or alter existing queues? Would you be required to add new code, or modify existing code?
