@@ -33,7 +33,14 @@ minute += 1
 print minute
 
 # minute balls
+def minute_balls():
+  return 0;
+  
 
 # five minute balls
+def five_minute_balls():
+  return 0;
 
 # hour balls
+def hour_balls():
+  return 0;
