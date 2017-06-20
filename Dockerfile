@@ -7,4 +7,7 @@ ENV MYVALUE my-value
 
 #EXPOSE 80
 
-CMD ["/usr/bin/python /home/user/test_ball-clock.py","-D","FOREGROUND"]
+COPY . /clock.py
+COPY . /test_clock.py
+
+CMD ["/usr/bin/python /home/user/test_clock.py","FOREGROUND"]
