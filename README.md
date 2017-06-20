@@ -28,6 +28,6 @@ Sample Input | Sample Output
 1. Be prepared to answer a question along the lines of… How would your code change if given the requirement to add a new queue or alter existing queues? Would you be required to add new code, or modify existing code?
 
 ## Run using the following command
-docker run ball-clock
+docker run ball-clock clock _number_ # where number is a number from 27 - 127
 
-Output should be
+Output will be in the format:
