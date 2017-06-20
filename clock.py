@@ -1,6 +1,5 @@
-# name
-# date
-# description
+#!/usr/bin/env python
+"""This program should accept user input and return how many days until the clock repeats patterns"""
 
 # import modules
 # need time for sleep

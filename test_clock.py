@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 import unittest
 from clock import how_many_balls
 from clock import minute_balls
